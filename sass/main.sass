@@ -1,0 +1,463 @@
+@use 'reset'
+@use 'font'
+@use 'var'
+
+= line 
+    width: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: absolute
+    margin: 0 7.5vw
+    z-index: -10
+    img:nth-child(1)
+        width: 0.5vw
+        height: 170vh
+        padding-bottom: 4vh
+    img:nth-child(2)
+        width: 4vw  
+
+= subject
+    font-size: 2.5vw
+    margin: 5vh 0 0 9vw
+    text-align: center
+
+html
+    scroll-behavior: smooth
+
+body
+    background-color: #000
+    font-family: winkle
+    color: var.$e 
+
+nav
+    background-color: rgba(var.$a,85%)
+    font-size: 2vw
+    width: 100%
+    position: fixed
+    z-index: 100
+    a
+        color: var.$e 
+        text-decoration: none
+        text-transform: uppercase
+        z-index: 10
+        margin: 6vw
+        margin-bottom: 5vh
+        margin-top: 5vh
+        left: 0
+
+.nav
+    display: flex
+    align-items: center
+    flex-direction: row
+    justify-content: center
+
+//header
+header
+    display: flex
+    .bg_header
+        margin: 40vh 0 0 45vw
+        position: absolute
+        display: flex
+        z-index: -10
+        .kotak1 
+            height: 1.5vh
+            width: 17vw
+            border-radius: 50vh
+            background-color: var.$e
+        .kotak2
+            height: 1.5vh
+            width: 10vw
+            border-radius: 50vh
+            background-color: var.$e
+            margin: 4vh 0 0 6vw
+        .bulat
+            height: 60vh
+            width: 60vh
+            background-color: var.$b
+            border-radius: 100%
+            position: absolute
+            margin: 0 0 0 12vw
+    .kontak
+        margin: 35vh 0 0 1.5vw
+        display: flex
+        position: fixed
+        flex-direction: column
+
+        a
+            padding-top: 4vh
+            img
+                width: 4vw
+    .kontak img:hover
+        width: 4.5vw
+    .line
+        @include line
+    .name
+        margin: 33vh 0 0 17vw
+        h1
+            font-size: 10vw
+            z-index: 10
+        p
+            font-size: 2vw
+            opacity: 65%
+    .img_header
+        z-index: 1
+        margin-left: 27vw
+        float: right
+        
+        img
+            height: 100vh
+            max-width: 100%
+            
+            
+//section1
+.sec1
+    display: flex
+    .aboutme
+        @include subject
+    .desc
+        display: flex
+        margin: 20vh 0 20vh 13vw
+        .bg
+            width: 65vw
+            height: 60vh
+            background-color: white
+            position: absolute
+            z-index: -1
+            border-radius: 7vw
+        img
+            width: 27vw
+        .text
+            color: #707070
+            text-align: center
+            font-size: 2.5vw
+            line-height: 8vh
+            margin: 6.5vh 18vw 5vh 2.5vw
+        .tabcontent
+            display: none
+            img
+                width: 60%
+        .tabcontent:nth-child(1)
+            p
+                font-size: 2.2vw
+        .tabcontent:nth-child(2)
+            margin: 0 0 0 7vw
+            h1
+                font-size: 3.5vw
+                padding-bottom: 1vh
+            p
+                line-height: 1.2
+                font-size: 2.2vw
+        .tabcontent:nth-child(3)
+            margin: 1vh 0 0 4vw
+            h1
+                font-size: 3.5vw
+            p
+                line-height: 1.5
+                font-size: 2vw
+        .tabcontent:nth-child(4)
+            margin: 0 0 0 2vw
+            h1
+                font-size: 3.5vw
+        .tab
+            position: absolute
+            display: flex
+            flex-direction: column
+            .tablinks
+                background-color: var.$c 
+                border: none
+                border-radius: 100% 
+                cursor: pointer 
+                font-size: 35pt
+                font-family: winkle
+                color: var.$e
+                padding: 10 18px
+                margin: 4vh 0 0 62vw
+            .tablinks:hover
+                background-color: var.$a 
+        .tabcontent.aktif 
+            display: block
+
+//section2        
+.sec2
+    display: flex
+    .line
+        @include line
+    .myproject
+        @include subject
+    .manipulation
+        margin: 20vh 0 0 8vw
+        .text_sec2
+            text-align: center
+            h1
+                font-size: 60pt
+            p
+                font-size: 25pt
+        .logo_psd
+            margin-top: 20px
+            padding-left: 35%
+            img
+                width: 120px
+    .img_sec2
+        img:nth-child(1)
+            width: 250px
+            position: absolute
+            z-index: -1
+            margin-left: 30vh
+        img:nth-child(2)
+            width: 470px
+            margin: -50 0 0 60px
+
+
+    
+//section3
+.sec3
+    margin: 20vh 0 10vh 60vh
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-x: visible
+    input
+        display: none
+    .container
+        width: 100%
+        height: 100%
+        max-height: 600px
+        max-width: 600px
+        display: flex
+        transform-style: preserve-3d
+        justify-content: center
+        align-items: center
+        flex-direction: column
+    .cards
+        position: relative
+        height: 500px
+        width: 430px
+        margin-bottom: 20px
+        perspective: 1000px
+        transform-style: preserve-3d
+    .cards label 
+        position: absolute
+        width: 430px
+        left: 0
+        right: 0
+        margin: auto
+        cursor: pointer
+        transition: transform 0.55s ease
+    .cards .image
+        display: flex
+        justify-content: space-between
+    .cards .image img
+        box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%)
+        margin-top: 23px
+        width: 300px
+        height: 100%
+        object-fit: cover
+
+    #s1:checked~.cards #slide3,
+    #s2:checked~.cards #slide1,
+    #s3:checked~.cards #slide2
+        box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%)
+        transform: translate3d(0, 0, 0)
+        --current-color1: #fad00c
+        --current-color2: #ECEAED
+    #s1:checked~.cards #slide1,
+    #s2:checked~.cards #slide2,
+    #s3:checked~.cards #slide3
+        box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%)
+        transform: translate3d(-70%, 0, -220px)
+        --current-color1: #ECEAED
+        --current-color2: #404457
+
+    #s1:checked~.cards #slide2,
+    #s2:checked~.cards #slide3,
+    #s3:checked~.cards #slide1
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%)
+        transform: translate3d(-35%, 0, -120px)
+        --current-color1: #ECEAED
+        --current-color2: #404457
+    
+
+
+//section4
+.sec4
+    display: flex
+    .line
+        @include line
+    .myproject
+        @include subject 
+    .illus
+        margin: 20vh 0 0 8vw
+        .text_sec4
+            text-align: center
+            h1
+                font-size: 60pt
+            p
+                font-size: 25pt
+        .logo_sec4
+            margin-top: 5vh
+            margin-left: 8vw
+            img:nth-child(1)
+                width: 10vw
+                margin-right: 1.5vw
+            img:nth-child(2)
+                width: 10vw
+    .img_sec4
+        img
+            width: 65vh
+            margin: 8vh
+
+
+//section5
+.slideshow-container
+    > div:nth-child(1)
+        display: none
+.sec5
+    display: flex
+    margin: 20vh 0 0 18vw
+    .image
+        padding: 8vh 5vw
+        img
+            width: 15vw
+        img:nth-child(3)
+            width: 58vh
+    .image2
+        padding: 8vh 6vw
+        img
+            width: 20vw
+        img:nth-child(2)
+            width: 15.5vw
+        img:nth-child(3)
+            width: 21vw
+        
+    .bg_sec5
+        position: absolute
+        z-index: -2
+        img
+            width: 70vw      
+    
+    .prev, .next 
+        cursor: pointer
+        position: absolute
+        width: auto
+        padding: 16px
+        transition: 0.6s ease
+        border-radius: 0 3px 3px 0
+        img
+            width: 6vw
+    .prev
+        margin: -35vh 0 0 -6vw
+    .next
+        margin: -35vh 0 0 67vw
+    .dot
+        cursor: pointer
+        height: 20px
+        width: 20px
+        margin: 3vh 0 0 1vw
+        background-color: var.$d 
+        border-radius: 50%
+        display: inline-block
+        transition: background-color 0.6s ease
+    .active, .dot:hover 
+        background-color: var.$b 
+
+
+//section6
+.sec6
+    display: flex
+    margin: 30vh 0 10vh 0
+    .line
+        @include line
+    .myproject
+        @include subject 
+    .modelling
+        margin: 20vh 0 0 8vw
+        .text_sec6
+            text-align: center
+            h1
+                font-size: 60pt
+            p
+                font-size: 25pt
+        .logo_sec6
+            margin-top: 5vh
+            margin-left: 12vw
+            img
+                width: 10vh
+                margin-right: 1.5vw
+    .img_sec6
+        img
+            width: 65vh
+            margin: 8vh
+
+//section7
+.sec7
+    height: 120vh
+    .bg_sec7
+        position: absolute
+        z-index: -10
+        margin: 10vh 0 10vh 25vw
+        img
+            width: 50vw
+    .image
+        img
+            width: 35vw
+            margin: 20vh 0 0 32vw
+            position: absolute
+    .image2
+        img
+            width: 40vw
+            margin: 25vh 0 0 30vw
+            position: absolute
+    .image3
+        img
+            width: 42vw
+            margin: 22vh 0 0 29vw
+            position: absolute
+    .dot2
+        cursor: pointer
+        height: 20px
+        width: 20px
+        margin: 120vh 0 0 1vw
+        background-color: var.$d 
+        border-radius: 50%
+        display: inline-block
+        transition: background-color 0.6s ease
+        z-index: 20
+    .active, .dot2:hover 
+        background-color: var.$b 
+    .prev, .next 
+        cursor: pointer
+        position: absolute
+        width: auto
+        transition: 0.6s ease
+        img
+            width: 8vw
+    .prev
+        margin: 50vh 0 0 15vw
+    .next
+        margin: 50vh 0 0 78vw
+
+//footer
+footer
+    margin-top: 25vh
+    .line
+        img
+            width: 100%
+    .black
+        width: 10vw
+        background-color: black
+        height: 80vh
+        position: absolute
+        
+    .contactme
+        font-size: 6vw
+        text-align: center
+        padding: 12vh 0 5vh  0
+    .kontak
+        display: flex
+        flex-direction: column
+        align-items: center
+        img
+            width: 30vw
+            margin: 5vh 5vw 0 0 
+        

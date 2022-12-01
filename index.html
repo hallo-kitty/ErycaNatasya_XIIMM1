@@ -1,0 +1,322 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+
+   
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#aboutme">About Me</a>
+            <a href="#myproject">My Project</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+
+    <header id="home">
+        <div class="bg_header">
+            <div class="kotak">
+                <div class="kotak1"></div>
+                <div class="kotak2"></div>
+            </div>
+            <div class="bulat"></div>
+        </div>
+        <div class="kontak">
+            <a href="https://web.facebook.com/erycanatasya.erycanatasya.5"><img src="image/logo/Group 4.png" alt=""></a>
+            <a href="https://www.instagram.com/eryca_natasya/"><img src="image/logo/Group 10.png" alt=""></a>
+            <a href="https://api.whatsapp.com/send/?phone=6281276969359&text&type=phone_number&app_absent=0"><img src="image/logo/Group 15.png" alt=""></a>
+            <a href="https://www.behance.net/erycanmmkine"><img src="image/logo/Group 20.png" alt=""></a>
+        </div>
+        <div class="line"><img src="image/Group 24.png" alt=""><img src="image/Group 145.png" alt=""></div>
+        <div class="name">
+            <h1>I'm <br>Eryca</h1>
+            <p>GRAPHIC DESIGNER</p>
+        </div>
+        <div class="img_header"><img src="image/header.png" alt=""></div>
+    </header>
+
+
+
+    <section class="sec1" id="aboutme">
+        <div class="aboutme">A<br>B<br>O<br>U<br>T<br><br>M<br>E</div>
+        <div class="desc">
+            <div class="bg"></div>
+            <div class="foto"><img src="image/Group 146.png" alt=""></div>
+            <div class="text">
+                <div id="intro" class="tabcontent aktif">
+                    <p>Hallo, saya Eryca dari Batam. Saya berpengalaman PKL di CV Asia Printing dari 10 Januari sampai 12 Mei 2022. Saya diposisikan sebagai desainer grafis.</p>
+                </div>
+                <div id="keahlian" class="tabcontent">
+                    <h1>Keahlian</h1>
+                    <p>Adobe XD <br>
+                    Adobe Illustrator <br>
+                    Autodesk Maya <br>
+                    html <br>
+                    CSS <br>
+                    CorelDraw <br>
+                    Adobe Premiere
+                    </p>
+                </div>
+                <div id="pendidikan" class="tabcontent">
+                    <h1>Pendidikan</h1>
+                    <P>2011-2017 <br>
+                    SD Maitreyawira Batam <br>
+                    2017-2020 <br>
+                    SMP Maireyawira Batam <br>
+                    2020-sekarang <br>
+                    SMK Maitreyawira Batam</P>
+                </div>
+                <div id="bahasa" class="tabcontent">
+                    <h1>Bahasa</h1>
+                    <p>Bahasa Indonesia</p>
+                    <img src="image/bahasa/Group 147.png" alt="">
+                    <p>Bahasa Mandarin</p>
+                    <img src="image/bahasa/Group 148.png" alt="">
+                    <p>Bahasa Inggris</p>
+                    <img src="image/bahasa/Group 149.png" alt="">
+                </div>
+            </div>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'intro')">1</button>
+                <button class="tablinks" onclick="openCity(event, 'keahlian')">2</button>
+                <button class="tablinks" onclick="openCity(event, 'pendidikan')">3</button>
+                <button class="tablinks" onclick="openCity(event, 'bahasa')">4</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="sec2" id="myproject">
+        <div class="line"><img src="image/Group 24.png" alt=""><img src="image/Group 145.png" alt=""></div>
+        <div class="myproject">M <br>Y <br><br>P <br>R <br>O <br>J <br>E <br>C <br>T</div>
+        <div class="manipulation">
+            <div class="text_sec2">
+                <h1>Photo <br>Manipulation</h1>
+                <p>with Adobe Photoshop</p>
+            </div>
+            <div class="logo_psd"><img src="image/logo/appIcon2x.png" alt=""></div>
+        </div>
+        <div class="img_sec2"><img src="image/Group 150.png" alt=""><img src="image/manipulation/Eryca Natasya_XIMM1_DoubleExposure.png" alt=""></div>
+    </section>
+
+
+
+    <section class="sec3">
+        <div class="container">
+            <input type="radio" name="slider" class="d-none" id="s1" checked>
+            <input type="radio" name="slider" class="d-none" id="s2">
+            <input type="radio" name="slider" class="d-none" id="s3">
+
+            <div class="cards">
+                <label for="s1" id="slide1">
+                    <div class="image"><img src="image/manipulation/Group 234.png" alt=""></div>
+                </label>
+
+                <label for="s2" id="slide2">
+                    <div class="image"><img src="image/manipulation/Group 53.png" alt=""></div>
+                </label>
+
+                <label for="s3" id="slide3">
+                    <div class="image"><img src="image/manipulation/Group 54.png" alt=""></div>
+                </label>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="sec4">
+        <div class="line"><img src="image/Group 24.png" alt=""><img src="image/Group 145.png" alt=""></div>
+        <div class="myproject">M <br>Y <br><br>P <br>R <br>O <br>J <br>E <br>C <br>T</div>
+        <div class="illus">
+            <div class="text_sec4">
+                <h1>Illustration</h1>
+                <p>with Illustrator & Clip Studio Paint</p>
+            </div>
+            <div class="logo_sec4">
+                <img src="image/logo/Artboard 1.png" alt="">
+                <img src="image/logo/Mask Group 9.png" alt="">
+            </div>
+        </div>
+        <div class="img_sec4"><img src="image/illus/Group 232.png" alt=""></div>
+    </section>
+
+
+    <section class="sec5">
+        <div class="bg_sec5">
+            <img src="image/illus/Group 235.png" alt="">      
+        </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="image">
+                        <img src="image/illus/Eryca_XI_Kinema_Illustrasi.jpg" alt="">
+                        <img src="image/illus/Eryca Natasya_Tipografi_XIMMKinema.png" alt="">
+                        <img src="image/illus/Eryca XIIMM1_CoralReefs.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="image2">
+                        <img src="image/illus/01.jpg" alt="">
+                        <img src="image/illus/02.jpg" alt="">
+                        <img src="image/illus/rubah.jpg" alt="">
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)"><img src="image/Group 55.png" alt=""></a>
+                <a class="next" onclick="plusSlides(1)"><img src="image/Group 56.png" alt=""></a>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                </div>
+            </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script> 
+
+
+    <section class="sec6">
+        <div class="line"><img src="image/Group 24.png" alt=""><img src="image/Group 145.png" alt=""></div>
+        <div class="myproject">M <br>Y <br><br>P <br>R <br>O <br>J <br>E <br>C <br>T</div>
+        <div class="modelling">
+            <div class="text_sec6">
+                <h1>3d Modelling</h1>
+                <p>with Autodesk Maya</p>
+            </div>
+            <div class="logo_sec6">
+                <img src="image/logo/76123305-4c826a00-5fc6-11ea-8c65-4eee21fd386f.png" alt="">
+            </div>
+        </div>
+        <div class="img_sec6"><img src="image/3d/Rectangle 45.png" alt=""></div>
+    </section>
+
+    <section class="sec7">
+        <div class="bg_sec7">
+            <img src="image/Rectangle 46.png" alt="">           
+        </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides2 fade">
+                <div class="image">
+                    <img src="image/3d/Group 75.png" alt="">
+                </div>
+            </div>
+            <div class="mySlides2 fade">
+                <div class="image2">
+                    <img src="image/3d/Group 87.png" alt="">
+                </div>
+            </div>
+            <div class="mySlides2 fade">
+                <div class="image3">
+                    <img src="image/3d/Group 88.png" alt="">
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides2(-1)"><img src="image/Group 55.png" alt=""></a>
+            <a class="next" onclick="plusSlides2(1)"><img src="image/Group 56.png" alt=""></a>
+            <br>
+            <div style="text-align:center">
+                <span class="dot2" onclick="currentSlide2(1)"></span> 
+                <span class="dot2" onclick="currentSlide2(2)"></span>
+                <span class="dot2" onclick="currentSlide2(3)"></span>  
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex2 = 1;
+        showSlides2(slideIndex2);
+        
+        function plusSlides2(n) {
+          showSlides2(slideIndex2 += n);
+        }
+        
+        function currentSlide2(n) {
+          showSlides2(slideIndex2 = n);
+        }
+        
+        function showSlides2(n) {
+          let l;
+          let slides = document.getElementsByClassName("mySlides2");
+          let dots = document.getElementsByClassName("dot2");
+          if (n > slides.length) {slideIndex2 = 1}    
+          if (n < 1) {slideIndex2 = slides.length}
+          for (l = 0; l < slides.length; l++) {
+            slides[l].style.display = "none";  
+          }
+          for (l = 0; l < dots.length; l++) {
+            dots[l].className = dots[l].className.replace(" active", "");
+          }
+          slides[slideIndex2-1].style.display = "block";  
+          dots[slideIndex2-1].className += " active";
+        }
+    </script> 
+
+    <footer>
+        <div class="line"><img src="image/logo/Group 244.png" alt=""></div>
+        <div class="black"></div>
+        <div class="contactme" id="contact">
+            <h1>Contact me!!</h1>
+        </div>
+        <div class="kontak">
+            <span>
+                <img src="image/logo/Group 241.png" alt="">
+                <img src="image/logo/Group 240.png" alt="">
+            </span>
+            <span>
+                <img src="image/logo/Group 242.png" alt="">
+                <img src="image/logo/Group 243.png" alt="">
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
